@@ -1,0 +1,20 @@
+ Scanner input = new Scanner (System.in);
+    char answer = input.next().charAt(0);
+
+      if (answer == 'O') {
+                    System.out.print("Enter file name: ");
+                    try (Scanner scanner = new Scanner(System.in)) {
+                      String fileName1 = scanner.nextLine();
+    try (BufferedReader reader = new BufferedReader(new FileReader(fileName1))) {
+     String line;
+     while ((line = reader.readLine()) != null) {
+       System.out.println(line);
+     }
+   } catch (IOException e) {
+     System.err.println("Error reading file: " + e.getMessage());
+   }
+                    }
+
+    }
+    }
+}
